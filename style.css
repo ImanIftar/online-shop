@@ -1,0 +1,52 @@
+*{
+    margin:0;
+    padding:0;
+}
+#navbar{
+    height:60px;
+    background-color:black;
+}
+#logo{
+    color:#f08804;
+    font-size:25px;
+}
+a{
+    margin-right:170px;
+    color:white;
+
+}
+.banner-card{
+    position:relative;
+}
+.banner-card img{
+    width:1400px;
+    height:500px;
+}
+.banner-text{
+    position:absolute;
+    top:10px;
+    color:black;
+     padding-left:650px;
+}
+.banner-text h2{
+    font-size:26px;
+    text-transform:uppercase;
+    font-weight:bold;
+    margin-bottom:5px;
+}
+#img3{
+    height:160px;
+    width:150px;
+}
+#img4{
+    height:160px;
+    width:150px;
+}
+#img5{
+    height:160px;
+    width:150px;
+}
+#img9{
+    height:160px;
+    width:150px;
+}
