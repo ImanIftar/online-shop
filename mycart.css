@@ -1,75 +1,3 @@
-*{
-    margin:0;
-    padding:0;
-}
-#navbar{
-    height:60px;
-    background-color:black;
-}
-#logo{
-    color:#f08804;
-    font-size:25px;
-}
-a{
-    margin-right:170px;
-    color:white;
-
-}
-.banner-card{
-    position:relative;
-}
-.banner-card img{
-    width:1400px;
-    height:500px;
-}
-.banner-text{
-    position:absolute;
-    top:10px;
-    color:black;
-     padding-left:650px;
-}
-.banner-text h2{
-    font-size:26px;
-    text-transform:uppercase;
-    font-weight:bold;
-    margin-bottom:5px;
-}
-#down{
-    height:160px;
-    width:150px;
-    display: inline block;
-}
-#img30{
-    height:160px;
-    width:150px;
-    display: inline block;
-}
-#beau{
-    height:160px;
-    width:150px;
-    display: inline block;
-}
-#img3{
-    height:160px;
-    width:150px;
-    display: inline block;
-}
-#img4{
-    height:160px;
-    width:150px; 
-  display: inline block;
-}
-#img5{
-    height:160px;
-    width:150px;
-    display: inline block;
-}
-#img9{
-    height:160px;
-    width:150px;
-     display: inline block;
-}
-/*
 cart button{
     position:relative;
     padding: 10px;
@@ -92,8 +20,7 @@ cart button{
 }
 .cart button.fa-shopping-cart{
     position: absolute;
-    z-index: 2;
-    top: 50%;
+    z-index: 2; top: 50%;
     left: -10%;
     font-size: 2em;
     transform: translate(-50%,-50%);
@@ -110,7 +37,7 @@ cart button{
     position: absolute;
     left: 50%;
     z-index: 3;
-    top: 50%;
+    top: 50;   top: 50%;
     color: #000;
     font-size: 1.2em;
     transform: translate(-50%,-50%);
@@ -129,8 +56,7 @@ cart button{
 }
 .cart button.clicked.fa-box{
     animation: box 1.5s ease-in-out forwards;
-}
-.cart button.clicked span.added{
+}.cart button.clicked span.added{
     animation: txt2 1.5s ease-in-out forwards;
 }
 @keyframes cart{
@@ -154,23 +80,22 @@ cart button{
     }
     100%{
         top:40%;
-        left:112%;
+        left:112%;    }
     }
-}
-@keyframes txt1{
-    0%{
-        opacity: 1;
+    @keyframes txt1{
+        0%{
+            opacity: 1;
+        }
+        20%,100%{
+            opacity: 0;
+        }
     }
-    20%,100%{
-        opacity: 0;
+    @keyframes txt2{
+        0%,80%{
+            opacity: 0;
+        }
+        100%{
+            opacity: 1;
+        }
     }
-}
-@keyframes txt2{
-    0%,80%{
-        opacity: 0;
-    }
-    100%{
-        opacity: 1;
-    }
-}
-*/
+    

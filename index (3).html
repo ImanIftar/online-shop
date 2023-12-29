@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>html and css</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body> 
+    <div id="navbar">
+      <a id="logo">BoutiQueendom</a>
+      <a href="index.html">HOME</a>
+      <a href="about.html">ABOUTUS</a>
+      <a href="contact.html">CONTACTUS</a>
+      <a href="my cart.html">MYCART</a>
+    </div>
+    <div class="banner-card">
+        <img src="image-7@2x.png">
+        <div class="banner-text">
+            <h3>Trendy Collections!</h3>
+            <h2>HIGHEST QUALITY COLLECTIONS</h2>
+            <P>you can shop and explore many different coolections from various brands here.</P>
+        </div>
+    </div>
+    <h1>Latest Arrivals!</h1><br><br>
+        <br>
+     <img id="img3" src="image-3@2x.png">
+    <ul><br>
+        <li>shirt only</li><li>RS:1000</li><li>cotton</li>
+       <li><a href="mycart.html"><button>Add to cart</button></a></li>
+    </ul><br>
+    <img id="img30" src="30e8372e0de0675f0d8f93bbcea2ed7f.jpg">
+    <ul>
+        <li>Heavy frock</li><li>RS:5000</li><li>reshmi</li>
+        <li><a href="mycart.html"><button>Add to cart</button></a></li>
+    </ul><br>
+    <img id="beau" src="download.jpeg">
+    <ul>
+        <li> frock</li><li>RS:5000</li><li>reshmi</li>
+        <li><a href="mycart.html"><button>Add to cart</button></a></li>
+    </ul><br>
+    <img id="down" src="download (1).jpeg">
+    <ul>
+        <li> Frock</li><li>RS:5000</li><li>reshmi</li>
+        <li><a href="mycart.html"><button>Add to cart</button></a></li>
+    </ul><br>
+     <img id="img4"src="image-4@2x.png">
+    <ul>
+        <li>shirt only</li><li>RS:1200</li><li>reshmi</li>
+        <li><a href="mycart.html"><button>Add to cart</button></a></li>
+    </ul><br>
+    <img id="img5" src="image-5@2x.png">
+    <ul>
+        <li><br>shirt trouser</li><li>RS:2000</li><li>linen</li>
+       <li>-<a href="mycart.html"><button>Add to cart</button></a></li>
+    </ul>
+
+    <img id="img9" src="image-9@2x.png">
+    <ul>
+        <li>frock</li><li>RS:1500</li><li>linen</li>
+        <li><a href="mycart.html"><button>Add to cart</button></a></li>
+    </ul><br>
+ <script>
+    function addToCart(element) {
+	var productParent = $(element).closest('div.product-item');
+
+	var price = $(productParent).find('.price span').text();
+	var productName = $(productParent).find('.productname').text();
+	var quantity = $(productParent).find('.product-quantity').val();
+
+	var cartItem = {
+		productName: productName,
+		price: price,
+		quantity: quantity
+	};
+	var cartItemJSON = JSON.stringify(cartItem);
+
+	var cartArray = new Array();
+	// If javascript shopping cart session is not empty
+	if (sessionStorage.getItem('shopping-cart')) {
+		cartArray = JSON.parse(sessionStorage.getItem('shopping-cart'));
+	}
+	cartArray.push(cartItemJSON);
+
+	var cartJSON = JSON.stringify(cartArray);
+	sessionStorage.setItem('shopping-cart', cartJSON);
+	showCartTable();
+    function emptyCart() {
+	if (sessionStorage.getItem('shopping-cart')) {
+		// Clear JavaScript sessionStorage by index
+		sessionStorage.removeItem('shopping-cart');
+		showCartTable();
+	}
+}
+    </script>
+</body>
+</html>

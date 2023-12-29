@@ -3,9 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>cart</title>
+    <link rel="stylesheet" href="mycart.css">
 </head>
 <body>
-    your cart is empty
+    < button class="cart-button">
+       <span class="add to cart">Add to cart</span>
+       <span class="added">Added</span>
+       <i class="fas fa-shopping-cart"></i>
+       <i class="fas fa-box"></i>
+</button>
+<script>
+    document.query Selector All('.cart button');
+    cart buttons.for each(button=>{button.add event listner('click,cart click');});
+    function cart click(){
+        let button=this;button.class list.add('clicked');
+    }
+    </script>
+ 
 </body>
 </html>
